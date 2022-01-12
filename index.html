@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>MMEX</title>
+    <link rel="icon" href="img/Asset 4.png" type="image/icon type">
+
+    <meta name="title" content="MMEX">
+    <meta name="description" content="Testing">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="MMEX">
+    <meta property="og:description" content="Testing">
+    <meta property="og:image" content="img/Asset 4.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="MMEX">
+    <meta property="twitter:description" content="Testing">
+    <meta property="twitter:image" content="img/Asset 4.png">
+    <title>Exchange Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/night-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <section class="app">
+        <div class="output animate__animated animate__slideInDown">
+            <div class="brand_contianer">
+                <img src="img/logo.svg" class="logo" alt="">
+                <p class="brand">MMEx</p>
+            </div>
+            <div class="result_contianer">
+                <p class="result" id="result">00.0</p>
+            </div>
+        </div>
+        <div class="divider animate__animated animate__slideInDown"></div>
+        <form class="calc" id="calc">
+            <div class="input-contianer contianer animate__animated animate__slideInLeft">
+                <label>Input</label>
+                <input type="number" id="input" class="input" placeholder="0.00" min="1" autofocus required>
+            </div>
+            <div class="from-contianer contianer animate__animated animate__slideInLeft">
+                <label>From</label>
+                <select id="from" class="from" required>
+                    <option value="" selected>Select Currency</option>
+                </select>
+            </div>
+            <div class="to-contianer contianer animate__animated animate__slideInRight">
+                <label>To</label>
+                <select id="to" class="to" required></select>
+            </div>
+            <div class="calculate contianer animate__animated animate__slideInRight">
+                <button class="calc_btn" id="calc_btn">Calculate</button>
+            </div>
+        </form>
+        <div class="history-contianer animate__animated animate__slideInUp">
+
+            <table class="history">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="historyList">
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </section>
+
+    <button class="mode-change animate__animated animate__slideInUp" onclick="changeMode()">
+        <i class="fas fa-moon" id="modeIcon"></i>
+    </button>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
